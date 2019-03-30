@@ -1,3 +1,4 @@
+
 package main;
 
 import java.util.*;
@@ -8,18 +9,20 @@ public static int[][] ticbox;
 		//check all rows
 		//loop through rows from 0 to 3 and check if all the 3 places have same marks
  		
-		
 		//check all cols
 		//loop through columns from 0 to 3 and check if all the 3 places have same marks
  		
 		//check both diagonals 
-		
-		
-		
-		//write your code here !!!
-		
-		
-		
+		if((ticbox[0][0] == 1&& ticbox[0][1]==1&& ticbox[0][2]==1)||
+			(ticbox[1][0]==1 && ticbox[1][1]==1&&ticbox[1][2]==1)||
+			(ticbox[2][0]==1 && ticbox[2][1]==1&&ticbox[2][2]==1)) {
+			return 1;
+		}
+		if((ticbox[0][0] == 2&& ticbox[0][1]==2&& ticbox[0][2]==2)||
+				(ticbox[1][0]==2 && ticbox[1][1]==2&&ticbox[1][2]==2)||
+				(ticbox[2][0]==2 && ticbox[2][1]==2&&ticbox[2][2]==2)) {
+				return 2;
+			}
 		return 0;
 		
 	}
@@ -37,8 +40,15 @@ public static int[][] ticbox;
 		//check if a2 is between 0 & 3
 		//check if the selected box is empty ie, already not marked by other player
 		//if all checks passed return true.
-		
-		
+		if(a1>0 && a1<3) {
+			return true;
+		}
+		if(a2>0 && a2<3) {
+			return true;
+		}
+		if(a1<0 && a2<0) {
+			return true;
+		}
 		//Write your code here !!!
 		
 		
